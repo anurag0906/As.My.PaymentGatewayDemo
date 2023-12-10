@@ -1,0 +1,57 @@
+﻿@model PaymentModel;
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+
+
+<head>
+  <meta charset="utf-8" />
+  <script src=" 
+ https://js.braintreegateway.com/web/dropin/1.40.2/js/dropin.min.js 
+ "></script>
+</head>
+<body>
+
+
+    <h1>My Checkout page</h1>
+
+
+
+  <!-- Step one: add an empty container to your page -->
+  <div id="dropin-container"></div>
+   <hr />
+            <button class="btn btn-success" type="button"><span>Confirm payment - $@Model.Amount</span></button>
+
+
+
+  <script type="text/javascript">
+    // call 'braintree.dropin.create' code here
+
+    
+// Step two: create a dropin instance using that container (or a string
+//   that functions as a query selector such as '#dropin-container')
+ var client_token = "@ViewBag.ClientToken";
+braintree.dropin.create({
+  container: document.getElementById('dropin-container'),
+    authorization: client_token
+  // ...plus remaining configuration
+}).then((dropinInstance) => {
+  // Use 'dropinInstance' here
+  // Methods documented at https://braintree.github.io/braintree-web-drop-in/docs/current/Dropin.html
+}).catch((error) => {
+
+    alert('error occurred');
+
+});
+
+
+
+  </script>
+</body>
+
+
+
+
+

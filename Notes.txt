@@ -1,0 +1,30 @@
+Paymet Gateway
+Guidelines
+- Credit card and online net banking
+- Secure
+
+Limitations/Challenges
+- accepts all cards
+- International payments
+- Security threat
+
+Gateway Type-
+- Redirect to Gateway (paypal)
+- 3rd party gateway (onsite cart checkout, offsite payment)
+- In-house Gateway (on-site payment)
+
+Example-
+- Paypal
+- Stripe
+- Braintree
+
+---------------------------------------
+Implementation
+- sandbox development/testing env.
+- Generate client credentials/Token
+- Execute payment
+
+---------------------------
+Braintree-
+ Drop-in UI is a ready-made payment UI that offers the quickest way to integrate and start securely accepting payments with Braintree.
+ https://developer.paypal.com/braintree/docs/start/drop-in
